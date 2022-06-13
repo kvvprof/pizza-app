@@ -1,0 +1,80 @@
+.card-popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	transition: all 0.4s ease 0s;
+	background: rgba(0, 0, 0, 0.557);
+	visibility: hidden;
+	opacity: 0;
+	z-index: 20;
+}
+
+.card-popup--enabled {
+	visibility: visible;
+	opacity: 1;
+}
+
+.card-popup__close-area {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+}
+
+.card-popup__content {
+	background: #fff;
+	border-radius: 30px;
+	z-index: 100;
+	width: 750px;
+	height: 400px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	margin: auto;
+}
+
+.card-popup__img {
+	width: 400px;
+	height: 350px;
+}
+
+.card-popup__details {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 350px;
+	width: 100%;
+	padding: 0 20px;
+}
+
+.card-popup__title {
+	font-weight: 600;
+	font-size: 25px;
+	line-height: 30px;
+}
+
+.card-popup__description {
+	font-size: 14px;
+	line-height: 20px;
+	margin-top: 20px;
+}
+
+.card-popup__add-to-card {
+	background: var(--main-color);
+	color: #ffffff;
+	padding: 10px;
+	border-radius: 50px;
+	font-size: 16px;
+	cursor: pointer;
+	width: 100%;
+}

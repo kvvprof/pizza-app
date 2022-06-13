@@ -1,0 +1,109 @@
+.header {
+	position: sticky;
+	top: 0px;
+	z-index: 10;
+	width: 100%;
+	padding: 10px 0;
+	background: #ffffff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: 0.3s;
+}
+
+.header__container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header--shadow {
+	box-shadow: rgb(6 5 50 / 10%) 0px 4px 30px;
+	transition: 0.3s;
+}
+
+.header--no-shadow {
+	background: #ffffff;
+}
+
+.header__logo {
+	width: 50px;
+}
+
+.header__menu-link {
+	font-size: 18px;
+	margin: 10px;
+	transition: 0.3s;
+}
+
+.header__menu-link:hover {
+	color: var(--main-color);
+	transition: 0.3s;
+}
+
+.header__cart {
+	background: var(--main-color);
+	padding: 15px 20px;
+	border-radius: 50px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	font-size: 18px;
+	color: #ffffff;
+	cursor: pointer;
+	font-weight: 300;
+	position: relative;
+}
+
+.header__cart:before {
+	content: '';
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 30px;
+	height: 30px;
+	background-color: var(--main-color);
+	background-image: url(./../../../public/images/right-arrows.png);
+	background-size: contain;
+	transition: 0.3s;
+	animation-name: arrowOut;
+	animation-duration: 0.3s;
+	visibility: hidden;
+	opacity: 0;
+}
+
+.header__cart:hover:before {
+	content: '';
+	animation-name: arrowIn;
+	animation-duration: 0.3s;
+	visibility: visible;
+	transition: 0.3s;
+	opacity: 1;
+}
+
+@keyframes arrowIn {
+	from {
+		transform: translate(-5px, 0px);
+	}
+
+	to {
+		transform: translate(0px, 0px);
+	}
+}
+
+@keyframes arrowOut {
+	from {
+		transform: translate(0px, 0px);
+	}
+
+	to {
+		transform: translate(-5px, 0px);
+	}
+}
+
+.header__cart-counter {
+	margin-left: 5px;
+	font-weight: 600;
+}

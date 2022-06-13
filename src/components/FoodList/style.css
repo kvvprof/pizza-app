@@ -1,0 +1,12 @@
+.food__title {
+	font-size: 26px;
+	font-weight: 600;
+	padding: 80px 0 30px 0;
+}
+
+.food__list {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
